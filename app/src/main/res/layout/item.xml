@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.darpysolutions.Utils.Test.CustomLinearLayout
+        android:id="@+id/item_root"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/pager_gradent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:src="@mipmap/plan_icn" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Plan Details"
+                        android:textColor="@color/wallet_grey"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="shortroad Park"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textSizeMedium" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Volume :250mb"
+                    android:textColor="@color/wallet_grey"
+                    android:textSize="@dimen/textSizeTiny" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Price : 13 Dove/MB"
+                    android:textColor="@color/wallet_grey"
+                    android:textSize="@dimen/textSizeTiny" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Duration : 12 hours"
+                    android:textColor="@color/wallet_grey"
+                    android:textSize="@dimen/textSizeTiny" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Speed : 12 hours"
+                    android:textColor="@color/wallet_grey"
+                    android:textSize="@dimen/textSizeTiny" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.darpysolutions.Utils.Test.CustomLinearLayout>
+</LinearLayout>

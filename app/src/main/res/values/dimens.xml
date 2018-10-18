@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="textSizeExtraLarge">@dimen/_26sdp</dimen>
+    <dimen name="textSizePerfectLarge">@dimen/_24sdp</dimen>
+    <dimen name="textSizeLarge">@dimen/_20sdp</dimen>
+    <dimen name="textSizeMedium">@dimen/_14sdp</dimen>
+    <dimen name="textSizeSmall">@dimen/_12sdp</dimen>
+    <dimen name="textSizeTiny">@dimen/_10sdp</dimen>
+
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:src="@mipmap/buy_icn" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+                android:id="@+id/tvWifiname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily 1 Gig"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 GB ᐧ 1 day ᐧ Daily repeat"
+                android:textColor="@color/black50PercentColor"
+                android:textSize="16sp" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="April 15,2018"
+                android:textColor="@color/black50PercentColor"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1020"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeMedium" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Dove"
+            android:textColor="@color/black50PercentColor"
+            android:textSize="@dimen/textSizeSmall" />
+    </LinearLayout>
+
+
+</LinearLayout>

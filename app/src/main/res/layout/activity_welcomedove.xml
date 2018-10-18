@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".LoginFlow.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/_25sdp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@mipmap/dove_logo" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Welcome to \nDove Network"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeExtraLarge" />
+
+    </LinearLayout>
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Continue"
+        android:textColor="@color/TextColourBlack"
+        android:textSize="@dimen/textSizeSmall" />
+</LinearLayout>

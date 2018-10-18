@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/gray_square"
+        android:orientation="horizontal">
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="mb"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizeTiny" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/selected"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="end|top"
+        android:padding="@dimen/_2sdp"
+        android:src="@mipmap/selected" />
+
+</FrameLayout>

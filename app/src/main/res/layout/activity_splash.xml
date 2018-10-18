@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:src="@mipmap/wifi" />
+    </LinearLayout>
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:gravity="center_horizontal"
+        android:text="Hello there"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeExtraLarge" />
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5sdp"
+        android:text="Welcome to the Dove App. This app lets you connect anonymously to the internet using a decentralized network."
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeSmall" />
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Continue"
+        android:textColor="@color/TextColourBlack"
+        android:textSize="@dimen/textSizeSmall" />
+</LinearLayout>

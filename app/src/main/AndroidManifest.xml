@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.darpysolutions.dove">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginFlow.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginFlow.PhoneRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.VerificationCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.WelcomeWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.WalletCreatedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.ImportWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.SetupPinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.SalePurchaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PurchaseData.BuyDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Manageplans_history.ManagePlansActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Manageplans_history.HistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Manageplans_history.BuyPlanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Manageplans_history.SalePlanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesData.SaleDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Wallet.WalletHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Wallet.WalletImportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Wallet.WalletExportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Wallet.WalletListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Wallet.WalletDeleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PurchaseData.ListWifiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LoginFlow.WelcomeDoveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Activity.BuyData"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Activity.SellData"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Activity.PlanDashBoardOngoingPlan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".Activity.PlanDashBoard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.fullScreen"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".Wallet.ScanQrActivity" />
+        <activity android:name=".Wallet.SacnQrActivity" />
+
+        <service
+            android:name=".LoggingService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

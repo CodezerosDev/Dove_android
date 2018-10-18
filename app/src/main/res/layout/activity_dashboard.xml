@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/flTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Dove Network"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizePerfectLarge" />
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@mipmap/dove_logo" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/grapeColor">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/blue_line" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/yello_line" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/yellow_square"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="23 connections around you"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llBuyData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.33"
+                android:background="@drawable/gray_square"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/buy_icn" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Buy Data"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSizeSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSellData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.33"
+                android:background="@drawable/gray_square"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/sell_icn" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Sell Data"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSizeSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWallet"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="0.33"
+                android:background="@drawable/gray_square"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/wallet_icn" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Wallet"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSizeSmall" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

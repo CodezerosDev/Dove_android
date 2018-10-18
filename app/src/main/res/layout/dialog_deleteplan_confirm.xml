@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/wallet_sheet"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Confirm delete?"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Are you sure you want to delete the plan Economy-350?"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnDeletePlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Delete plan"
+        android:textColor="@color/TextColourBlack"
+        android:textSize="@dimen/textSizeSmall" />
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/wallet_grey"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeSmall" />
+</LinearLayout>

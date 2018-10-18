@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:src="@mipmap/dove_logo" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Setup PIN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeExtraLarge" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/poppins_medium"
+            android:text="This PIN will be used to protect your account on this device"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etCode"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_3"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:hint="Enter PIN"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/lnVerificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/edtCode1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_grey"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black50PercentColor"
+                android:textCursorDrawable="@color/QRCodeBlackColor"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edtCode2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_grey"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black50PercentColor"
+                android:textCursorDrawable="@color/QRCodeBlackColor"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edtCode3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_grey"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black50PercentColor"
+                android:textCursorDrawable="@color/QRCodeBlackColor"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edtCode4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_grey"
+                android:cursorVisible="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/black50PercentColor"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:minEms="2"
+                android:singleLine="true"
+                android:text=""
+                android:textCursorDrawable="@color/QRCodeBlackColor"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="Import Wallet"
+            android:textColor="@color/TextColourBlack"
+            android:textSize="@dimen/textSizeSmall" />
+
+    </LinearLayout>
+</LinearLayout>

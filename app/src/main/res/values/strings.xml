@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dove</string>
+
+    <string name="google_api_key">AIzaSyC-mIRq-YBF5Y-6d2YvvPHfQibpaAxiteE</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_scan_qr">ScanQrActivity</string>
+</resources>

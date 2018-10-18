@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:src="@mipmap/cross" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Buying"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeLarge" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Select Existing Plan"
+                android:textColor="@color/wallet_grey" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_main_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/tutorial_activity_page_indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    attrs:piv_animationType="thinWorm"
+                    attrs:piv_dynamicCount="true"
+                    attrs:piv_interactiveAnimation="true"
+                    attrs:piv_padding="@dimen/_5sdp"
+                    attrs:piv_radius="@dimen/_3sdp"
+                    attrs:piv_selectedColor="@color/colorAccent"
+                    attrs:piv_unselectedColor="@color/wallet_grey"
+                    attrs:piv_viewPager="@id/activity_main_view_pager" />
+            </LinearLayout>
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="start"
+                android:text="Create New Plan"
+                android:textColor="@color/wallet_grey"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_light
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="start"
+                android:text="Wsnt to create new plan? Just flll the following details and click connect Now, it is ready to use"
+                android:textColor="@color/wallet_grey"
+                android:textSize="@dimen/textSizeTiny" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Total volume"
+                        android:textColor="@color/wallet_grey"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:id="@+id/seekBarOutPutVol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:text="200 MB"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarVol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:max="1050"
+                    android:min="50"
+                    android:paddingEnd="@dimen/_25sdp"
+                    android:paddingStart="@dimen/_25sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemVol_left"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/left_arrow" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/seekBarItemVolScroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/seekBarItemVol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemVol_right"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/right_arrow" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Duration"
+                        android:textColor="@color/wallet_grey"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:id="@+id/seekBarOutPutDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:text="6 hours"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:max="25"
+                    android:min="1"
+                    android:paddingEnd="@dimen/_25sdp"
+                    android:paddingStart="@dimen/_25sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemDurationScroll_left"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/left_arrow" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/seekBarItemDurationScroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/seekBarItemDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemDurationScroll_right"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/right_arrow" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Speed"
+                        android:textColor="@color/wallet_grey"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:id="@+id/seekBarOutPutSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:text="2 Mbps"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:max="22"
+                    android:min="2"
+                    android:paddingEnd="@dimen/_25sdp"
+                    android:paddingStart="@dimen/_25sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemSpeedScroll_left"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/left_arrow" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/seekBarItemSpeedScroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/seekBarItemSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemSpeedScroll_right"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/right_arrow" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Price"
+                        android:textColor="@color/wallet_grey"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                        android:id="@+id/seekBarOutPutPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:text="6 Dove"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSizeSmall" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:max="52"
+                    android:min="2"
+                    android:paddingEnd="@dimen/_25sdp"
+                    android:paddingStart="@dimen/_25sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemPriceScroll_left"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/left_arrow" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/seekBarItemPriceScroll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/seekBarItemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="seekBarItemPriceScroll_right"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@mipmap/right_arrow" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Create"
+        android:onClick="SalePurchaseActivity"
+        android:textColor="@color/TextColourBlack"
+        android:textSize="@dimen/textSizeSmall" />
+</LinearLayout>

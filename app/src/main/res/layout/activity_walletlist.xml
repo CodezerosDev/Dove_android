@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:src="@drawable/icons_light_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Wallet"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/coolGrayColor" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvWalletList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_export"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_sheet"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="Export Wallet"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_square_small_curve"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="15dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="15dp"
+                    android:textColorHint="@color/coolGrayColor"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCreatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Export"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnCancelPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wallet_grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_export_type2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Export Wallet"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_qr"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal" />
+
+
+            <TextView
+                android:id="@+id/tv_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Import wallet"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/btnexport_type2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Copy to Clipboard"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCancelType2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_graybtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_delete_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_sheet"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Delete wallet?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Deleting this wallet will disable you from making any transactions from this wallet. And if this is the only wallet it would disable you from making any transaction on the Dove Network application. Do you want to continue?"
+                android:textColor="@color/black50PercentColor"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/btnDeleteWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Delete wallet"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnDeleteCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wallet_grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

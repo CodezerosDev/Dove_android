@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:padding="5dp"
+            android:src="@drawable/icons_light_close" />
+
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeLarge" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:gravity="start"
+            android:text="Add, Edit, Update the wallet here.Make sure wallet is compatible with the application "
+            android:textColor="@color/wallet_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginEnd="@dimen/_26sdp"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@mipmap/wallet_bg"
+            android:orientation="vertical">
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                android:id="@+id/tv_switch"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Switch Account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeTiny" />
+
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="bottom"
+                android:text="289"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeExtraLarge" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="0 Ether"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeTiny" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                    android:id="@+id/tv_wallet_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Exodus Wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSizeTiny" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:id="@+id/tvImportWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="Import Wallet"
+                android:textColor="@color/TextColourBlack"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:id="@+id/tvExportWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="Export Wallet"
+                android:textColor="@color/TextColourBlack"
+                android:textSize="@dimen/textSizeSmall" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_import"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_sheet"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="Import wallet"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnPasteCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Paste copied address"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Scan barcode"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnSelectFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Select File"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnCancelImport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wallet_grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--<?-->
+    <!-- <LinearLayout
+         android:id="@+id/relative_import"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="bottom"
+         android:orientation="vertical"
+         app:behavior_hideable="true"
+         app:behavior_peekHeight="0dp"
+         app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@drawable/dialog_bg"
+             android:orientation="vertical"
+             android:padding="15dp">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="20dp"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:text="Import wallet"
+                 android:textColor="@color/white"
+                 android:textSize="25sp" />
+
+             <Button
+                 android:id="@+id/btnPasteCopy"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginRight="25dp"
+                 android:layout_marginTop="15dp"
+                 android:background="@drawable/blue_btn_bg"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:text="Paste copied address"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <Button
+                 android:id="@+id/btnScan"
+                 android:layout_width="match_parent"
+
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginRight="25dp"
+                 android:layout_marginTop="15dp"
+                 android:background="@drawable/dark_bluew_btn_bg"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:text="Scan barcode"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <Button
+                 android:id="@+id/btnSelectFile"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="25dp"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginRight="25dp"
+                 android:layout_marginTop="15dp"
+                 android:background="@drawable/dark_bluew_btn_bg"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:text="Select File"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <Button
+                 android:id="@+id/btnCancelImport"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="25dp"
+                 android:layout_marginLeft="25dp"
+                 android:layout_marginRight="25dp"
+                 android:layout_marginTop="15dp"
+                 android:background="@drawable/shape_graybtn"
+                 android:fontFamily="@font/poppins_semibold"
+                 android:text="Cancel"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+         </LinearLayout>
+     </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/relative_import_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Confirmation"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_square_small_curve"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_wallet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Enter Name"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="15dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="15dp"
+                    android:textColorHint="@color/coolGrayColor"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent">
+
+                    <TextView
+                        android:id="@+id/tv_ether_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="start"
+                        android:text="0 Ether"
+                        android:textColor="@color/black25PercentColor"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_dove_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_toStartOf="@+id/tv_ether_balance"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="end"
+                        android:text="0 Dove"
+                        android:textColor="@color/black25PercentColor"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnImportConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Import this wallet"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCancelConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_graybtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Import Again"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<? ?>-->
+    <LinearLayout
+        android:id="@+id/relative_export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_sheet"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="Export Wallet"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_file_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Import wallet"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_paste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_square_small_curve"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Paste Data"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/coolGrayColor"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_square_small_curve"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="@color/coolGrayColor"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnCreatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Export"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnCancelPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wallet_grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative_export_type2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Export Wallet"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_qr"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal" />
+
+
+            <TextView
+                android:id="@+id/tv_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Import wallet"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/btnexport_type2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/yellow_btn_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Copy to Clipboard"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCancelType2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_graybtn"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

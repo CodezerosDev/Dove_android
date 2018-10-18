@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:src="@mipmap/dove_logo" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:text="Verification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeExtraLarge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/warmGrayColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:src="@mipmap/ai_flag" />
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="7dp"
+                android:text="1"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/warmGrayColor" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="7dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/warmGrayColor" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Please enter the code sent on your phone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lnVerificationCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                        android:id="@+id/edtCode1"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rounded_grey"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:minEms="2"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black50PercentColor"
+                        android:textCursorDrawable="@color/QRCodeBlackColor"
+                        android:textSize="@dimen/textSizeMedium" />
+
+
+                    <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                        android:id="@+id/edtCode2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rounded_grey"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:minEms="2"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black50PercentColor"
+                        android:textCursorDrawable="@color/QRCodeBlackColor"
+                        android:textSize="@dimen/textSizeMedium" />
+
+
+                    <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                        android:id="@+id/edtCode3"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rounded_grey"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:minEms="2"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black50PercentColor"
+                        android:textCursorDrawable="@color/QRCodeBlackColor"
+                        android:textSize="@dimen/textSizeMedium" />
+
+
+                    <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                        android:id="@+id/edtCode4"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rounded_grey"
+                        android:cursorVisible="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:minEms="2"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black50PercentColor"
+                        android:textCursorDrawable="@color/QRCodeBlackColor"
+                        android:textSize="@dimen/textSizeMedium" />
+
+                </LinearLayout>
+
+                <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                    android:id="@+id/etCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bg_3"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:padding="7dp"
+                    android:text=""
+                    android:visibility="gone" />
+
+                <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+                    android:id="@+id/tvTimer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black50PercentColor"
+                    android:textSize="@dimen/textSizeLarge" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtHiddenCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#00000000"
+            android:textSize="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_6"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Edit Number"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Join"
+            android:textColor="@color/TextColourBlack"
+            android:textSize="@dimen/textSizeSmall" />
+    </LinearLayout>
+</LinearLayout>

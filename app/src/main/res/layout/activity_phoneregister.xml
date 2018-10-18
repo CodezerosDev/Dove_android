@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:src="@mipmap/dove_logo" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeExtraLarge" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Enter your phone number to get started"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/warmGrayColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:src="@mipmap/ai_flag" />
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="7dp"
+                android:text="1"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/warmGrayColor" />
+
+            <com.darpysolutions.Utils.Views.Edittext.EditText_poppins_medium
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="7dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/warmGrayColor" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Already have an account? Sign In"
+            android:textColor="@color/black75PercentColor"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Join"
+        android:textColor="@color/TextColourBlack"
+        android:textSize="@dimen/textSizeSmall" />
+</LinearLayout>

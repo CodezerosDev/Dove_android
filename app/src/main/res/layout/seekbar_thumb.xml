@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/rounded_seekbar"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeMedium" />
+
+    </LinearLayout>
+
+</LinearLayout>

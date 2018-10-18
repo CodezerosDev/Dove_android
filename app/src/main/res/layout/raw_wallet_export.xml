@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@mipmap/wallet_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="start"
+                android:text="Active"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvExportWallet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Export"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvRemoveWallet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="right"
+                android:text="Remove"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_bold
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="bottom"
+            android:text="289"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeExtraLarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="0 Ether"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeTiny" />
+
+            <com.darpysolutions.Utils.Views.Textview.TextView_poppins_regular
+                android:id="@+id/wallet_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Exodus Wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeTiny" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

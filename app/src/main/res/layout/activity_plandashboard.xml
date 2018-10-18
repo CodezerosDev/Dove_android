@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flWallet"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+
+        <TextView
+            android:id="@+id/tvWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/white_square"
+            android:drawableLeft="@mipmap/icons_back"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/dove_logo_1"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="289"
+            android:textColor="@color/coolGrayColor" />
+
+        <ImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@mipmap/settings" />
+
+    </FrameLayout>
+
+    <com.darpysolutions.Utils.Views.Textview.TextView_poppins_semibold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Dove Network"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeLarge" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/tvBuyData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_primary"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Buy Data"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+
+        <com.darpysolutions.Utils.Views.Textview.TextView_poppins_medium
+            android:id="@+id/tvSaleData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Sell Data"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSizeSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/coolGrayColor" />
+
+    <FrameLayout
+        android:id="@+id/flParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>
